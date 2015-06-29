@@ -22,6 +22,37 @@
 		<script src="web/js/css3-mediaqueries.js"></script>
 		<script src="web/js/fwslider.js"></script>
 	<!--end slider -->
+				<script  language="javascript">
+	
+	function valida_dados (nomeform){
+		 if (nomeform.nome.value=="")
+		    {
+		        alert ("Por favor digite o nome.");
+		        return false;
+		    }
+
+		    if (nomeform.email.value=="" || nomeform.email.value.indexOf('@', 0) == -1 || nomeform.email.value.indexOf('.', 0) == -1)
+		    {
+		        alert ("E-mail invalido.");
+		        return false;
+		    }
+			 if (nomeform.senha.value=="") {
+		        alert ("Por favor digite uma senha.");
+		        return false;     
+			}
+			 if (nomeform.rsenha.value=="") {
+				  alert ("Por favor repita a senha.");
+				  return false;
+			 }
+			if (nomeform.senha.value != nomeform.rsenha.value){
+			   alert ("Os campos das senhas estão diferentes.");
+			   return false;
+		   }
+		return true;
+		}
+	</script>
+
+
 	</head>
 	
 	<body>
@@ -66,6 +97,8 @@
 	    	
    		 </script>
 		<%} %>
+
+
 	
 		<!----start-container----->
 		<div class="navbar">
@@ -128,11 +161,11 @@
 				        	<p class="text-center">A maneira mais fácil de se cadastrar</p>
 				        </div>
 				        <div style="margin-top:3%; margin-bottom:3%; border: 1px solid #4B5456;"></div>
-				        <form class="form-group" action="Servlet">
+				        <form class="form-group" action="Servlet"  onSubmit="return valida_dados(this)">
 				        	<div class="row">
 					        	<div class="col-md-6">
-					        		<label for="nome">Nome</label>
-					        		<input type="text" class="form-control" name="nome">
+					        		<label for="nome"><strong style="color:red; font-size:18px;">*</strong>Nome</label>
+					        		<input type="text" class="form-control" name="nome" placeholder="Seu Nome" required="">
 					        	</div>
 					        	<div class="col-md-6">
 					        		<label for="unome">Sobrenome</label>
@@ -141,8 +174,10 @@
 					        </div>
 				        	<div class="row">
 				        		<div class="col-md-6">
-				        			<label for="email">Email</label>
-				        			<input type="text" class="form-control" name="email">
+				        			<label for="email" >
+				        			<strong style="color:red; font-size:18px;">*</strong>Email</label>
+				        			<input type="text" class="form-control" name="email" 
+				        			placeholder="ex: gafanhoto@hotmail.com" required="">
 				        		</div>
 				        	</div>
 				        	<div class="row">
@@ -171,12 +206,12 @@
 				        	</div>
 				        	<div class="row">
 					        	<div class="col-md-6">
-					        		<label for="senha">Senha</label>
-					        		<input type="password" class="form-control" name="senha">
+					        		<label for="senha"><strong style="color:red; font-size:18px;">*</strong>Senha</label>
+					        		<input type="password" class="form-control" name="senha"placeholder="Digite uma senha"required="">
 					        	</div>
 					        	<div class="col-md-6">
-					        		<label for="rsenha">Repita a senha</label>
-					        		<input type="password" class="form-control" name="rsenha"> 
+					        		<label for="rsenha"><strong style="color:red; font-size:20px;">*</strong>Repita a senha</label>
+					        		<input type="password" class="form-control" name="rsenha" placeholder="Repita a senha" required=""> 
 					        	</div>
 					        </div>
 					        <div class="row">
@@ -196,11 +231,11 @@
 				        	<div class="row">
 					        	<div class="col-md-11">
 					        		<label for="email">E-mail</label>
-					        		<input type="text" class="form-control" name="email">
+					        		<input type="text" class="form-control" name="email" placeholder="Seu Email" required="">
 					        	</div>
 					        	<div class="col-md-11">
 					        		<label for="seha">Senha</label>
-					        		<input type="password" class="form-control" name="senha"> 
+					        		<input type="password" class="form-control" name="senha" placeholder="Sua Senha"required=""> 
 					        	</div>
 					        </div>
 					       

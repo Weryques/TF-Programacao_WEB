@@ -104,8 +104,34 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-					<A href="#">Editar Perfil</A> <A href="#">Sair</A> <br>
-					<p class=" text-info">Data atual</p>
+					<A href="#">Editar Perfil</A> <A href="logout.jsp">Sair</A> <br>
+					<p class=" text-info"> <script language=javascript type="text/javascript">
+now = new Date
+ var diaSemana; 
+ if(now.getDay()==1){
+	 diaSemana="Segunda Feira";
+	 }
+ if(now.getDay()==2){
+	 diaSemana="Terça Feira";
+	 }
+ if(now.getDay()==3){
+	 diaSemana="Quarta Feira";
+	 }
+ if(now.getDay()==4){
+	 diaSemana="Quinta Feira";
+	 }
+ if(now.getDay()==5){
+	 diaSemana="Sexta Feira";
+	 }
+ if(now.getDay()==6){
+	 diaSemana="Sabado";
+	 }
+ if(now.getDay()==7){
+	 diaSemana="Domingo";
+	 }
+document.write ("Hoje é " + diaSemana+ ",  dia " + now.getDate() + " do " + now.getMonth() + " de " + now.getFullYear() )
+</script>
+  </p>
 				</div>
 				<div
 					class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
