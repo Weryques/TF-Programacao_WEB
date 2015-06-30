@@ -182,8 +182,8 @@
 				        	</div>
 				        	<div class="row">
 				        		<div class="col-md-6">
-				        			<label for="genero">Genero M/F</label>
-				        			<input type="text" class="form-control" name="genero">
+				        			<label for="genero"><strong style="color:red; font-size:18px;">*</strong>Genero M/F</label>
+				        			<input type="text" class="form-control" name="genero" required="">
 				        		</div>
 				        	</div>
 				        	<div class="row">
