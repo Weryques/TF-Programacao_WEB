@@ -129,7 +129,10 @@ now = new Date
  if(now.getDay()==7){
 	 diaSemana="Domingo";
 	 }
-document.write ("Hoje é " + diaSemana+ ",  dia " + now.getDate() + " do " + now.getMonth() + " de " + now.getFullYear() )
+
+var mes = now.getMonth() + 1;
+ 
+document.write ("Hoje é " + diaSemana+ ",  dia " + now.getDate() + " do " + mes + " de " + now.getFullYear() )
 </script>
   </p>
 				</div>
