@@ -1,2 +1,6 @@
 # TF-Programacao_WEB
-Trabalho final da disciplina de Programação para WEB. Sistemas de Informação - Universidade Federal de Goiás
+
+<html>Trabalho final da disciplina de Programação para WEB<br> 
+Sistemas de Informação<br> 
+Universidade Federal de Goiás
+</html>
